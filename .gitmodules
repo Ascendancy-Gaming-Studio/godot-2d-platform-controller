@@ -1,0 +1,12 @@
+[submodule "packages/collection"]
+	path = packages/collection
+	url = https://github.com/jcmljunior/collection
+[submodule "packages/value-notifier"]
+	path = packages/value-notifier
+	url = https://github.com/jcmljunior/value-notifier
+[submodule "packages/state-machine"]
+	path = packages/state-machine
+	url = https://github.com/jcmljunior/state-machine
+[submodule "packages/autoload"]
+	path = packages/autoload
+	url = https://github.com/jcmljunior/autoload
