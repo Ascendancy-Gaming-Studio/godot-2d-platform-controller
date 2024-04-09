@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot 2D Platform Controller"
+config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+GetIt="*res://packages/get-it/get_it.gd"
+
+[display]
+
+window/size/viewport_width=288
+window/size/viewport_height=208
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+
+[editor]
+
+naming/node_name_casing=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/script-ide/addons/script-ide/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

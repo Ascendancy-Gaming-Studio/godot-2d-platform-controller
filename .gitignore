@@ -2,3 +2,4 @@
 .godot/
 packages/
 addons/
+*.import
