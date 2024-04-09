@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck840vsvj6tmu"]
+
+[ext_resource type="Script" path="res://features/demo/scripts/demo.gd" id="1_pxl56"]
+
+[node name="demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pxl56")
+
+[node name="color_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="margin_container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="box_container" type="BoxContainer" parent="margin_container"]
+layout_mode = 2
+alignment = 1
+vertical = true
+
+[node name="box_container2" type="BoxContainer" parent="margin_container/box_container"]
+layout_mode = 2
+alignment = 1
+
+[node name="label" type="Label" parent="margin_container/box_container/box_container2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 92
+text = "0"
+
+[node name="box_container" type="BoxContainer" parent="margin_container/box_container"]
+layout_mode = 2
+alignment = 1
+
+[node name="increment_counter" type="Button" parent="margin_container/box_container/box_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Increment Counter"
+
+[node name="decrement_counter" type="Button" parent="margin_container/box_container/box_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Decrement Counter"
+
+[connection signal="pressed" from="margin_container/box_container/box_container/increment_counter" to="." method="_on_increment_counter_pressed"]
+[connection signal="pressed" from="margin_container/box_container/box_container/decrement_counter" to="." method="_on_decrement_counter_pressed"]
