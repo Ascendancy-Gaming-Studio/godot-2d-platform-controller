@@ -10,3 +10,6 @@
 [submodule "packages/autoload"]
 	path = packages/autoload
 	url = https://github.com/jcmljunior/autoload
+[submodule "addons/script-ide"]
+	path = addons/script-ide
+	url = https://github.com/Maran23/script-ide
